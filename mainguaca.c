@@ -58,6 +58,9 @@ int main()
 	//char src4[] = "abcdef";
 	//char dest4[] = "ghijk";
 	//printf("ft_strlcpy: %s\n", (char *)ft_strlcpy(dest4, src4, 4);
-	
+
+	char s4[] = "aecd";
+	char s5[] = "abcd";
+	printf("ft_strcmp: %d\n", ft_strncmp(s4, s5, 3));	
 	return(0);
 }

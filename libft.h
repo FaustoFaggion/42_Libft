@@ -180,6 +180,17 @@ char	*ft_strlcat(char *dest, const char *src, size_t n);
 char	*ft_strlcpy(char *dest, const char *src, size_t n);
 
 /**
+ * @brief	compares the first at most n bytes from two strings s1 and s2.  The locale is 
+			not taken into account.
+ * @param 1 
+ * @param 2 
+ * @return  return an integer less than, equal to, or greater than zero if s1 (or the first n
+ 			bytes thereof) is found, respectively, to be less than, to match, or be greater
+			than s2.
+**/
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
+
+/**
  * @brief	calculates the length of the string pointed to by s, excluding the terminating null   
 			byte ('\0').	
  * @param 1 
