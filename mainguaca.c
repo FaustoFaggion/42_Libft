@@ -44,5 +44,20 @@ int main()
 	printf("ft_memset: %p ->", (char *)ft_memset(s, 'c', 3));
 	printf("ft_memset: %p ->", s);
 	printf("ft_memset: %s\n", (char *)ft_memset(s, 'c', 3));
-    return(0);
+    
+	char s3[] = "abcdef";
+	printf("ft_strchr: %p\n", (char *)ft_strchr(s3, 'c'));
+	printf("ft_strchr: %s\n", ft_strchr(s3, 'c'));
+	printf("ft_strchr: %s\n", s3);	
+
+	char src3[] = "abcdef";
+	char dest3[] = "ghijk";
+	printf("ft_strlen: %ld\n", ft_strlen(dest3));
+	printf("ft_strcat: %s\n", (char *)ft_strlcat(dest3, src3, 4));
+
+	//char src4[] = "abcdef";
+	//char dest4[] = "ghijk";
+	//printf("ft_strlcpy: %s\n", (char *)ft_strlcpy(dest4, src4, 4);
+	
+	return(0);
 }

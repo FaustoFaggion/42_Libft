@@ -138,6 +138,54 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 **/
 void	*ft_memset(void *s, int c, size_t n);
 
+/**
+ * @brief	returns a pointer to the first occurrence of the character c in the string s. 	
+ * @param 1 pointer to the string
+ * @param 2 character c
+ * @return  return a pointer to the matched character or NULL if the character is not found.
+			The terminating null byte is considered part of the string, so that if c is 
+			specified as '\0', these functions return a pointer to the terminator.
+**/
+char	*ft_strchr(const char *s, int c);
+
+/**
+ * @brief	returns a pointer to the last occurrence of the character c in the string s.
+ * @param 1	pointer to the string
+ * @param 2 character c
+ * @return  returns a pointer to the matched character, or a pointer to the null byte at the   
+       		end of s (i.e., s+strlen(s)) if the character is not found.
+**/
+char	*ft_strrchr(const char *s, int c);
+
+/**
+ * @brief 	appends  the  src string to the dest string, overwriting the terminating null byte   
+       		('\0') at the end of dest at most n bytes from src, and then adds a terminating
+			null byte.
+			The strings may not overlap, and the dest string must have enough space for the result.
+			If dest is not large enough, program behavior is unpredictable.
+			src does not need to be null-terminated if it contains n or more bytes.
+ * @param 1 
+ * @param 2 
+ * @param 3
+ * @return  return a pointer to the resulting string dest.
+**/
+char	*ft_strlcat(char *dest, const char *src, size_t n);
+
+/**
+ * @brief 	
+ * @param 1 
+ * @param 2 
+ * @return  
+**/
+char	*ft_strlcpy(char *dest, const char *src, size_t n);
+
+/**
+ * @brief	calculates the length of the string pointed to by s, excluding the terminating null   
+			byte ('\0').	
+ * @param 1 
+ * @return  the number of bytes in the string pointed to by s.
+**/
+size_t ft_strlen(const char *s);
 
 /**
  * @brief 	
