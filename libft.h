@@ -118,6 +118,17 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 /**
+ * @brief 	copies n bytes from memory area src to memory area dest.  The memory areas may
+			overlap: copying takes place as though the bytes in src are first copied into a 
+	   		temporary array that does not overlap src or dest, and the bytes are then copied 
+			from the temporary array to dest.
+ * @param 1 *dest	-memory area where is going to be copied to.
+ * @param 2 *src	-memory area where is going to be copied by.
+ * @return  A pointer to dest.
+**/
+void	*ft_memmove(void *dest, const void *src, size_t n);
+
+/**
  * @brief 	Fills the first n bytes of the memory area pointed to by s
 			with the constant byte c. #include <string.h>
  * @param 1 void *s	- pointer to a memory área. 
