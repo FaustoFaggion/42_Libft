@@ -61,6 +61,27 @@ int main()
 
 	char s4[] = "aecd";
 	char s5[] = "abcd";
-	printf("ft_strcmp: %d\n", ft_strncmp(s4, s5, 3));	
+	printf("ft_strcmp: %d\n", ft_strncmp(s4, s5, 3));
+
+	char hay[] = "bcaecd";
+	char nee[] = "'\0";
+	printf("ft_strnstr: %s\n", (char *)ft_strnstr(hay, nee, 4));
+	printf("ft_strnstr: %s\n", hay);
+
+	char s6[] = "abcdef";
+	printf("ft_strrchr: %p\n", (char *)ft_strrchr(s6, 'd'));
+	printf("ft_strrchr: %p\n", &s6);
+	
+	printf("ft_tolower: %c\n", ft_tolower('L'));
+	printf("ft_toupper: %c\n", ft_toupper('u'));
+
+	char s7[] = "baby";
+	printf("ft_strdup: %p\n", (char *)ft_strdup(s7));
+	printf("ft_strdup: %s\n", (char *)ft_strdup(s7));
+	
+	char s8[] = "baby";
+	printf("ft_substr: %p\n", (char *)ft_substr(s7, 1, 3));
+	printf("ft_substr: %s\n", (char *)ft_substr(s7, 1, 3));
+	
 	return(0);
 }

@@ -149,13 +149,12 @@ void	*ft_memset(void *s, int c, size_t n);
 char	*ft_strchr(const char *s, int c);
 
 /**
- * @brief	returns a pointer to the last occurrence of the character c in the string s.
- * @param 1	pointer to the string
- * @param 2 character c
- * @return  returns a pointer to the matched character, or a pointer to the null byte at the   
-       		end of s (i.e., s+strlen(s)) if the character is not found.
+ * @brief 	duplicates the string s. Memory for the new string is obteined with malloc, and can 
+			be freed with free.
+ * @param 1 string s
+ * @return  a pointer to the new string.
 **/
-char	*ft_strrchr(const char *s, int c);
+char	*ft_strdup(const char *s);
 
 /**
  * @brief 	appends  the  src string to the dest string, overwriting the terminating null byte   
@@ -180,6 +179,14 @@ char	*ft_strlcat(char *dest, const char *src, size_t n);
 char	*ft_strlcpy(char *dest, const char *src, size_t n);
 
 /**
+ * @brief	calculates the length of the string pointed to by s, excluding the terminating null   
+			byte ('\0').	
+ * @param 1 
+ * @return  the number of bytes in the string pointed to by s.
+**/
+size_t ft_strlen(const char *s);
+
+/**
  * @brief	compares the first at most n bytes from two strings s1 and s2.  The locale is 
 			not taken into account.
  * @param 1 
@@ -191,12 +198,50 @@ char	*ft_strlcpy(char *dest, const char *src, size_t n);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /**
- * @brief	calculates the length of the string pointed to by s, excluding the terminating null   
-			byte ('\0').	
+ * @brief 	finds the first occurrence of the substring needle in the string haystack.
+			The terminating null bytes ('\0') are not compared.
  * @param 1 
- * @return  the number of bytes in the string pointed to by s.
+ * @param 2
+ * @param 3 
+ * @return  a pointer to the beginning of the located substring, or NULL if the substring 
+			is not found.
 **/
-size_t ft_strlen(const char *s);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
+
+/**
+ * @brief	returns a pointer to the last occurrence of the character c in the string s.
+ * @param 1	pointer to the string
+ * @param 2 character c
+ * @return  returns a pointer to the matched character, or a pointer to the null byte at the   
+       		end of s (i.e., s+strlen(s)) if the character is not found.
+**/
+char	*ft_strrchr(const char *s, int c);
+
+/**
+ * @brief 	Allocates (with malloc(3)) and returns a substring from the string ’s’.
+			The substring begins at index ’start’ and is of maximum size ’len’.
+ * @param 1 The string from which to create the substring.
+ * @param 2 The start index of the substring in the string ’s’.
+ * @param 3	The maximum length of the substring.
+ * @return  The substring. NULL if the allocation fails.
+**/
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+/**
+ * @brief 	Change a alpha character from uppercase to lowercase.
+ * @param 1 
+ * @param 2 
+ * @return  a alpha lowercase character.
+**/
+int	ft_tolower(int c);
+
+/**
+ * @brief 	Change a alpha character from lowercase to uppercase.
+ * @param 1 
+ * @param 2 
+ * @return  a alpha uppercase character.
+**/
+int	ft_toupper(int c);
 
 /**
  * @brief 	
