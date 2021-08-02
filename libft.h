@@ -157,30 +157,32 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
 
 /**
- * @brief 	appends  the  src string to the dest string, overwriting the terminating null byte   
-       		('\0') at the end of dest at most n bytes from src, and then adds a terminating
-			null byte.
-			The strings may not overlap, and the dest string must have enough space for the result.
-			If dest is not large enough, program behavior is unpredictable.
-			src does not need to be null-terminated if it contains n or more bytes.
- * @param 1 
- * @param 2 
- * @param 3
- * @return  return a pointer to the resulting string dest.
+ * @brief 	appends  the NULL terminated  src string to the dest string, overwriting the 
+ * 			terminating null byte ('\0') at the end of dest at most n bytes from src, and then
+ * 			adds a terminating null byte. 
+ * 			The strings may not overlap, and the dest string must have enough space for the result.
+ * 			If dest is not large enough, program behavior is unpredictable. 
+ * 			src does not need to be null-terminated if it contains n or more bytes.
+ * @param 1 pointer to the destination memory area
+ * @param 2 pointer to the source memory area
+ * @param 3	buffer size in bytes
+ * @return  return the total length of the string, that is the initial length of dest plus
+ * 			the length of src
 **/
-char	*ft_strlcat(char *dest, const char *src, size_t n);
+size_t	ft_strlcat(char *dest, const char *src, size_t n);
 
 /**
- * @brief 	
- * @param 1 
- * @param 2 
- * @return  
+ * @brief 	copies up to size -1 characters from the NULL teminated src to dest string and
+ * 			and NULL terminate the dest string.
+ * @param 1 Pointer to the destination area of memory.
+ * @param 2 Pointer to the source area of memory
+ * @return  Buffer size in bytes.
 **/
-char	*ft_strlcpy(char *dest, const char *src, size_t n);
+size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
 
 /**
- * @brief	calculates the length of the string pointed to by s, excluding the terminating null   
-			byte ('\0').	
+ * @brief	calculates the length of the string pointed to by s, excluding the terminating null 
+ * 			byte ('\0').	
  * @param 1 
  * @return  the number of bytes in the string pointed to by s.
 **/

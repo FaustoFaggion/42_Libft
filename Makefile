@@ -1,10 +1,10 @@
-NAME	= libft.a
+NAME	:= libft.a
 
-CC		= gcc
+CC		:= gcc
 
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS	:= -Wall -Werror -Wextra
 
-SRC		= 	ft_atoi.c \
+SRC		:= 	ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \
@@ -12,9 +12,9 @@ SRC		= 	ft_atoi.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
-			ft_memchar.c \
+			ft_memchr.c 
 
-OBJ		= $(SRC:.c=.o)
+OBJ		:= $(SRC:.c=.o)
 
 .DEFAULT_GO := all
 

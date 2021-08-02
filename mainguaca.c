@@ -3,7 +3,7 @@
 
 int main()
 {
-
+/**
 	printf("ft_atoi: %d\n", ft_atoi("-3456"));
 
 	char _bzero[4] = "1234";
@@ -50,14 +50,18 @@ int main()
 	printf("ft_strchr: %s\n", ft_strchr(s3, 'c'));
 	printf("ft_strchr: %s\n", s3);	
 
-	char src3[] = "abcdef";
-	char dest3[] = "ghijk";
-	printf("ft_strlen: %ld\n", ft_strlen(dest3));
-	printf("ft_strcat: %s\n", (char *)ft_strlcat(dest3, src3, 4));
+	char src100[] = "abcdef";
+	char dest100[] = "ghijk";
+	printf("ft_strlcat: %ld -> ", (size_t )ft_strlcat(dest100, src100, 5));
+	printf("%s\n", dest100);
 
-	//char src4[] = "abcdef";
-	//char dest4[] = "ghijk";
-	//printf("ft_strlcpy: %s\n", (char *)ft_strlcpy(dest4, src4, 4);
+	char src4[] = "abcdef";
+	char dest4[] = "ghijk";
+	printf("ft_strlcpy: %ld -> ", (size_t )ft_strlcpy(dest4, src4, 4));
+	printf("%s\n", dest4);
+
+	char s100[] = "ghijk";
+	printf("ft_strlen: %ld\n", ft_strlen(s100));
 
 	char s4[] = "aecd";
 	char s5[] = "abcd";
@@ -82,6 +86,11 @@ int main()
 	char s8[] = "baby";
 	printf("ft_substr: %p\n", (char *)ft_substr(s7, 1, 3));
 	printf("ft_substr: %s\n", (char *)ft_substr(s7, 1, 3));
-	
+**/
+	char dest[] = "abc";
+	char src[] = "123";
+
+	printf("%ld\n", ft_strlcat(dest, src, 3));
+	printf("%ld\n", ft_strlcpy(dest, src, 3));
 	return(0);
 }

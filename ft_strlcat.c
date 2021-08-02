@@ -1,18 +1,37 @@
 #include "libft.h"
 
-char	*ft_strlcat(char *dest, const char *src, size_t n)
-{	//se eu concateno a partir do byte nulo de dest, como dest pode ter espaço suficiente?
+// variable "i" will be the size of the smaller value, *s length or n.
+static size_t    ft_strnlen(const char *s, size_t n)
+{
+    size_t    i;
+
+    i = 0;
+    while (s[i] && i < n)
+        i++;
+    return (i);
+}
+
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
+{	
 	size_t	i;
-	size_t	dest_len;
+	size_t	len;
 
 	i = 0;
-	dest_len = ft_strlen(dest);
-	while (src[i] != '\0' && i < n)
-	{
-		dest[dest_len] = src[i];
-		dest_len++;
+	
+	len = ft_strnlen(dest, dstsize);
+	/*
+	len = 0;
+	while(dest[len] != '\0' && len < dstsize) //verifica se n é menor que dest
+		len++;
+	*/
+	if(len == dstsize)
+		return(len + ft_strlen(src));
+	while(dstsize > 1 && src[i] != '\0')
+	{	
+		dest[len + i] = src[i];
 		i++;
+		dstsize--;
 	}
-	dest[dest_len] = '\0';
-	return(dest);
+	dest[len + i] = '\0';
+	return(len + ft_strlen(src));
 }
