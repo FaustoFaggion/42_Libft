@@ -80,6 +80,14 @@ int ft_isdigit(char c);
 int	ft_isprint(int c);
 
 /**
+ * @brief	Allocates (with malloc(3)) and returns a string representing the integer
+ * 			received as an argument. Negative numbers must be handled. 	
+ * @param 1 the integer to convert.
+ * @return  The string representing the integer. NULL if the allocation fails.
+**/
+char	*ft_itoa(int n);
+
+/**
  * @brief	Scans the inicial n bytes of the memory arrea pointed to 
  			by s for the first instance of c. Both are interpreted 
 			as unsigned char.
@@ -139,6 +147,16 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 
 /**
+ * @brief 	Allocates (with malloc(3)) and returns an array of strings obtained by
+ * 			splitting ’s’ using the character ’c’ as a delimiter. The array must be 
+ * 			ended by a NULL pointer.
+ * @param 1 The string to be split.
+ * @param 2 The delimiter character.
+ * @return  The array of new strings resulting from the split. NULL if the allocation fails.
+**/
+char	**ft_split(char const *s, char c);
+
+/**
  * @brief	returns a pointer to the first occurrence of the character c in the string s. 	
  * @param 1 pointer to the string
  * @param 2 character c
@@ -155,6 +173,15 @@ char	*ft_strchr(const char *s, int c);
  * @return  a pointer to the new string.
 **/
 char	*ft_strdup(const char *s);
+
+/**
+ * @brief 	Allocates (with malloc(3)) and returns a new string, which is the result of the
+ * 			concatenation of ’s1’ and ’s2’.
+ * @param 1 the prefix string
+ * @param 2 the sufix string
+ * @return  returns a new string, which is the result of the concatenation of ’s1’ and ’s2’.
+**/
+char	*ft_strjoin(char const *s1, char const *s2);
 
 /**
  * @brief 	appends  the NULL terminated  src string to the dest string, overwriting the 
@@ -218,6 +245,15 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
        		end of s (i.e., s+strlen(s)) if the character is not found.
 **/
 char	*ft_strrchr(const char *s, int c);
+
+/**
+ * @brief	Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters specified
+ * 			 in ’set’ removed from the beginning and the end of the string. 	
+ * @param 1 The string to be trimmed.
+ * @param 2 The reference set of characters to trim.
+ * @return  The trimmed string. NULL if the allocation fails.
+**/
+char	*ft_strtrim(char const *s1, char const *set);
 
 /**
  * @brief 	Allocates (with malloc(3)) and returns a substring from the string ’s’.
