@@ -13,5 +13,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new = (char *)malloc(tot_size * sizeof(char));
 	ft_strlcpy(new, s1, (len_s1 + 1));
 	ft_strlcpy(&new[len_s1], s2, (len_s2 + 1));
-	return(new);
+	return (new);
 }

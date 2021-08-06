@@ -2,24 +2,24 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *s;
-	unsigned char *d;
-	int i;
+	unsigned char	*s;
+	unsigned char	*d;
+	int				i;
 
-	if(src == NULL || dest == NULL)
-		return(NULL);
+	if (src == NULL || dest == NULL)
+		return (NULL);
 	s = (unsigned char *)src;
 	d = (unsigned char *)dest;
 	i = n ;
-	if(d > s)
+	if (d > s)
 	{
-		while(i > 0)
+		while (i > 0)
 		{
-			d[i -1] = s[i -1];
+			d[i - 1] = s[i - 1];
 			i--;
 		}
-		return(dest);
+		return (dest);
 	}
 	ft_memcpy(d, s, n);
-	return(dest);
+	return (dest);
 }

@@ -3,6 +3,7 @@
 
 int main()
 {
+/*
 	printf("ft_atoi: %d\n", ft_atoi("-3456"));
 
 	char _bzero[4] = "1234";
@@ -20,7 +21,7 @@ int main()
 	printf("ft_isdigit: %d\n", ft_isdigit('2'));
 
 	printf("ft_isprint: %d\n", ft_isprint('2'));
-/*
+
 	char s[] = "abcd";
 	printf("ft_memchr: %p ", (char *)ft_memchr(s, 'c', 3));
 	printf("-> %p\n", s);
@@ -43,7 +44,7 @@ int main()
 	printf("ft_memset: %p ", (char *)ft_memset(s, 'c', 3));
 	printf("-> %p ", s);
 	printf("-> %s\n", (char *)ft_memset(s, 'c', 3));
-*/  
+
 	char s3[] = "abcdef";
 	printf("ft_strchr: %p ", (char *)ft_strchr(s3, 'c'));
 	printf("->  %s ", ft_strchr(s3, 'c'));
@@ -72,7 +73,7 @@ int main()
 	printf("-> %s\n", hay);
 
 	char s6[] = "abcdef";
-	printf("ft_strrchr: %p", (char *)ft_strrchr(s6, 'd'));
+	printf("ft_strrchr: %s", (char *)ft_strrchr(s6, 'c'));
 	printf("-> %p\n", &s6);
 	
 	printf("ft_tolower: %c\n", ft_tolower('L'));
@@ -103,17 +104,27 @@ int main()
 	printf("-> %s\n", mal2);
 	free(mal2);
 
-	char strtrim[] = "ww1234ww";
-	char strset[] = "w";
-	char *maltrim;
+	char	strtrim[] = "ww1234ww";
+	char	strset[] = "w";
+	char	*maltrim;
 	maltrim = ft_strtrim(strtrim, strset);
 	printf("ft_strtrim: %s\n", maltrim);
 	free(maltrim);
 
-	int intitoa = 1234;
-	char *malitoa;
+	 int	intitoa = 1234;
+	char	*malitoa;
 	malitoa = ft_itoa(intitoa);
 	printf("ft_itoa: %s\n", maltrim);
 	free(malitoa);
+*/	
+	char	strsplit[] = "agora vai dar certo";
+	char	c = ' ';
+	char	**ret;
+
+	ret = ft_split(strsplit, c);
+
+	free(ret);
+
+
 	return(0);
 }
