@@ -150,6 +150,8 @@ void	*ft_memset(void *s, int c, size_t n);
  * @brief 	Allocates (with malloc(3)) and returns an array of strings obtained by
  * 			splitting ’s’ using the character ’c’ as a delimiter. The array must be 
  * 			ended by a NULL pointer.
+ * 			to free the malloc is necessary a loop as follow:
+ * 			
  * @param 1 The string to be split.
  * @param 2 The delimiter character.
  * @return  The array of new strings resulting from the split. NULL if the allocation fails.

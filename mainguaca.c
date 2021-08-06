@@ -123,6 +123,25 @@ int main()
 
 	ret = ft_split(strsplit, c);
 
+	printf("%s\n", ret[0]);
+	printf("%c\n", ret[0][5]);
+	printf("%s\n", ret[1]);
+	printf("%c\n", ret[1][3]);
+	printf("%s\n", ret[2]);
+	printf("%c\n", ret[2][3]);
+	printf("%s\n", ret[3]);
+	printf("%c\n", ret[3][5]);
+
+	printf("%c\n\n", ret);
+	printf("%p\n", &ret[0]);
+	printf("%p\n", &ret[1]);
+	printf("%p\n", &ret[2]);
+	printf("%p\n\n", &ret[3]);
+	
+	printf("%p\n", &ret[0][0]);
+	printf("%p\n", &ret[1][0]);
+	printf("%p\n", &ret[2][0]);
+	printf("%p\n", &ret[3][0]);
 	free(ret);
 
 
