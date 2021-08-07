@@ -15,5 +15,6 @@ char	*ft_strdup(const char *s)
 		mem[i] = s[i];
 		i++;
 	}
+	mem[i] = '\0';
 	return ((char *)mem);
 }
