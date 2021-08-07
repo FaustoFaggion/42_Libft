@@ -26,12 +26,15 @@ char	**ft_split(char const *s, char c)
 			while (s[len_ptr] != c)
 				len_ptr++;
 			tab[i] = ft_substr(s, 0, len_ptr);
-			if (tab[i] == NULL)
+			if (!tab[i])
 			{
 				while (i >= 0)
 				{
-					free(tab[i]);
-					tab[i] = NULL;
+					if(tab[i] != NULL)
+					{
+						free(tab[i]);
+						tab[i] = NULL;
+					}
 					i--;
 				}
 				free(tab);
