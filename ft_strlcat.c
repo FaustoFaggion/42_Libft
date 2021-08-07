@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	dest[len + i] = '\0';
 	return (len + ft_strlen(src));
 }
-
+/*
 int main(void)
 {
 	char dest[30]; memset(dest, 0, 30);
@@ -31,3 +31,4 @@ int main(void)
 	printf("%ld", (size_t )ft_strlcat(dest, src, 17));
 	printf(" -> %s\n", dest);
 }
+*/
