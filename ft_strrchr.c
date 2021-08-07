@@ -29,6 +29,6 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (*((char *)s + len) != (char)c)
 		return (NULL);
-	else if (*((char *)s + len) == (char)c)
-		return ((char *)s + len);
+	return ((char *)s + len);
+	
 }
