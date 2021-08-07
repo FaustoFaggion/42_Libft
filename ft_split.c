@@ -28,9 +28,9 @@ char	**ft_split(char const *s, char c)
 			tab[i] = ft_substr(s, 0, len_ptr);
 			if (tab[i] == NULL)
 			{
-				while (i >0)
+				while (i >= 0)
 				{
-					free(tab[i - 1]);
+					free(tab[i]);
 					tab[i] = NULL;
 					i--;
 				}
