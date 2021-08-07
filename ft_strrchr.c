@@ -19,8 +19,10 @@ char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;
 	
-	if(!s || !c)
-		return(NULL);
+	if (!s)
+		return (NULL);
+	if (c == 0)
+		return ((char *)s + ft_strlen(s));
 	len = ft_strlen(s);
 	while (len > 0)
 	{
@@ -28,7 +30,8 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)s + len);
 		len--;
 	}
-	if (len == 0 && *((char *)s + len) != (char)c )
-		return(NULL);
-	return ((char *)s + len);
+	if (*((char *)s + len) != (char)c)
+		return (NULL);
+	else if (*((char *)s + len) == (char)c)
+		return ((char *)s + len);
 }
