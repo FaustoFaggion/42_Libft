@@ -18,8 +18,6 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;
-	size_t	i;
-
 	
 	len = ft_strlen(s);
 	while (len > 0)
@@ -30,7 +28,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return ((char *)s + len);
 }
-
+/*
 int main(void)
 {
 	char	str[] = "tripouille";
@@ -38,3 +36,4 @@ int main(void)
 	printf("%s", ft_strrchr(str, 't'));
 	return(0);
 }
+*/
