@@ -28,12 +28,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return ((char *)s + len);
 }
-/*
-int main(void)
-{
-	char	str[] = "tripouille";
-
-	printf("%s", ft_strrchr(str, 't'));
-	return(0);
-}
-*/
