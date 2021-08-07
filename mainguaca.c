@@ -9,7 +9,7 @@ char mapi_ft(unsigned int c, char n)
 
 int main()
 {
-/*
+
 	printf("ft_atoi: %d\n", ft_atoi("-3456"));
 
 	char _bzero[4] = "1234";
@@ -31,7 +31,7 @@ int main()
 	char s[] = "abcd";
 	printf("ft_memchr: %p ", (char *)ft_memchr(s, 'c', 3));
 	printf("-> %p\n", s);
-*/
+
 	char src1[] = "123456789";
 	char dest1[] = "";
 	printf("ft_memcpy: memory %p ", ft_memcpy(&src1[3], src1, 6));//dest 456789 src 123456789
@@ -53,8 +53,7 @@ int main()
 	char dest4[] = "";
 	printf("ft_memmove: %p ", ft_memmove(src4, &src4[3], 6));//dest 123456789 src 456789 
 	printf("-> src string: %s\n", src4);
-/*
-/*
+
 	char s1[] = "adcd";
 	char s2[] = "abcd";
 	printf("ft_memcmp: %d\n", ft_memcmp(s1, s2, 3));
@@ -73,10 +72,10 @@ int main()
 	printf("ft_strlcat: %ld", (size_t )ft_strlcat(dest100, src100, 5));
 	printf(" -> %s\n", dest100);
 
-	char src4[] = "abcdef";
-	char dest4[] = "ghijk";
-	printf("ft_strlcpy: %ld", (size_t )ft_strlcpy(dest4, src4, 4));
-	printf(" -> %s\n", dest4);
+	char srccpy[] = "abcdef";
+	char destcpy[] = "ghijk";
+	printf("ft_strlcpy: %ld", (size_t )ft_strlcpy(destcpy, srccpy, 4));
+	printf(" -> %s\n", destcpy);
 
 	char s100[] = "ghijk";
 	printf("ft_strlen: %ld\n", ft_strlen(s100));
@@ -137,32 +136,32 @@ int main()
 	
 	char	strsplit[] = "agora vai dar certo";
 	char	c = ' ';
-	char	**ret;
+	char	**retor;
 
-	ret = ft_split(strsplit, c);
+	retor = ft_split(strsplit, c);
 
-	printf("%s\n", ret[0]);
-	printf("%c\n", ret[0][5]);
-	printf("%s\n", ret[1]);
-	printf("%c\n", ret[1][3]);
-	printf("%s\n", ret[2]);
-	printf("%c\n", ret[2][3]);
-	printf("%s\n", ret[3]);
-	printf("%c\n", ret[3][5]);
+	printf("%s\n", retor[0]);
+	printf("%c\n", retor[0][5]);
+	printf("%s\n", retor[1]);
+	printf("%c\n", retor[1][3]);
+	printf("%s\n", retor[2]);
+	printf("%c\n", retor[2][3]);
+	printf("%s\n", retor[3]);
+	printf("%c\n", retor[3][5]);
 
-	printf("%p\n\n", ret[4]);
+	printf("%p\n\n", retor[4]);
 
-	printf("%p\n", &ret[0]);
-	printf("%p\n", &ret[1]);
-	printf("%p\n", &ret[2]);
-	printf("%p\n\n", &ret[3]);
+	printf("%p\n", &retor[0]);
+	printf("%p\n", &retor[1]);
+	printf("%p\n", &retor[2]);
+	printf("%p\n\n", &retor[3]);
 	
-	printf("%p\n", &ret[0][0]);
-	printf("%p\n", &ret[1][0]);
-	printf("%p\n", &ret[2][0]);
-	printf("%p\n", &ret[3][0]);
+	printf("%p\n", &retor[0][0]);
+	printf("%p\n", &retor[1][0]);
+	printf("%p\n", &retor[2][0]);
+	printf("%p\n", &retor[3][0]);
 
-    free(ret);
+    free(retor);
 
 
 	char	s_mapi[] = "abcd";
@@ -170,6 +169,6 @@ int main()
 
 	ret = ft_strmapi(s_mapi, mapi_ft);
 	printf("%s", ret);
-*/
+
 	return(0);
 }

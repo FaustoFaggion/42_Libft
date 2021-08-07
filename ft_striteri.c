@@ -6,7 +6,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int	size;
 	unsigned int	i;
 
-	if (!str || !f)
+	if (s || f)
 	{
 		str = (char *)s;
 		size = ft_strlen(str);
