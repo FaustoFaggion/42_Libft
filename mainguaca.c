@@ -28,6 +28,12 @@ int main()
 
 	printf("ft_isprint: %d\n", ft_isprint('2'));
 
+	int		intitoa = 1234;
+	char	*malitoa;
+	malitoa = ft_itoa(intitoa);
+	printf("ft_itoa: %s\n", malitoa);
+	free(malitoa);
+
 	char s[] = "abcd";
 	printf("ft_memchr: %p ", (char *)ft_memchr(s, 'c', 3));
 	printf("-> %p\n", s);
@@ -127,12 +133,6 @@ int main()
 	maltrim = ft_strtrim(strtrim, strset);
 	printf("ft_strtrim: %s\n", maltrim);
 	free(maltrim);
-
-	 int	intitoa = 1234;
-	char	*malitoa;
-	malitoa = ft_itoa(intitoa);
-	printf("ft_itoa: %s\n", maltrim);
-	free(malitoa);
 	
 	char	strsplit[] = "agora vai dar certo";
 	char	c = ' ';
