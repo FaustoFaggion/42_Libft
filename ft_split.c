@@ -26,19 +26,17 @@ char	**ft_split(char const *s, char c)
 			while (s[len_ptr] != c)
 				len_ptr++;
 			tab[i] = ft_substr(s, 0, len_ptr);
-			if (!tab[i])
+			if (tab[i] == NULL)
 			{
-				while (i >= 0)
+				while (i >0)
 				{
-					if(tab[i] != NULL)
-					{
-						free(tab[i]);
-						tab[i] = NULL;
-					}
+					free(tab[i - 1]);
+					tab[i] = NULL;
 					i--;
 				}
 				free(tab);
 				tab = NULL;
+				return(tab);
 			}
 			s = s + len_ptr;
 			i++;
