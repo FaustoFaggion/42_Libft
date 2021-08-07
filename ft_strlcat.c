@@ -1,23 +1,14 @@
 #include "libft.h"
-
-// variable "i" will be the size of the smaller value, *s length or n.
-static size_t	ft_strnlen(const char *s, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] && i < n)
-		i++;
-	return (i);
-}
+#include <stdio.h>
+#include <string.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	len;
 
-	len = ft_strnlen(dest, dstsize);
-	if (len == dstsize)
+	len = ft_strlen(dest);
+	if (dstsize <= len)
 		return (len + ft_strlen(src));
 	i = 0;
 	while (dstsize > 1 && src[i] != '\0')
@@ -28,4 +19,15 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	}
 	dest[len + i] = '\0';
 	return (len + ft_strlen(src));
+}
+
+int main(void)
+{
+	char dest[30]; memset(dest, 0, 30);
+	char * src = (char *)"AAAAAAAAA";
+	dest[0] = 'B';
+	memset(dest, 'C', 15);
+
+	printf("%ld\n\n", (size_t )ft_strlcat(dest, src, 17));
+	printf(" -> %s\n", dest);
 }
