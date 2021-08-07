@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "libft.h"
 
+char mapi_ft(unsigned int c, char n)
+{
+	n = n + 1;
+	return (n);
+}
+
 int main()
 {
 /*
@@ -25,18 +31,30 @@ int main()
 	char s[] = "abcd";
 	printf("ft_memchr: %p ", (char *)ft_memchr(s, 'c', 3));
 	printf("-> %p\n", s);
+*/
+	char src1[] = "123456789";
+	char dest1[] = "";
+	printf("ft_memcpy: memory %p ", ft_memcpy(&src1[3], src1, 6));//dest 456789 src 123456789
+	printf("-> src string: %s \n", &src1[3]);
 
-	char src1[] = "abcdefghij";
-	char dest1[] = "klmnopqr";
-	printf("ft_memcpy: memory %p ", ft_memcpy(&src1[2], src1, 8));
-	printf("-> src string: %s ", src1);
-	printf("-> dest string: %s\n", dest1);
 
-	char src2[] = "abcdefghij";
-	char dest2[] = "klmnopqr";
-	printf("ft_memmove: %p ", ft_memmove(&src2[2], src2, 8));
-	printf("-> src string: %s\n", src2);
+	char src2[] = "123456789";
+	char dest2[] = "";
+	printf("ft_memmove: %p ", ft_memmove(&src2[3], src2, 6));//dest 456789 src 123456789
+	printf("-> src string: %s\n", &src2[3]);
 
+	char src3[] = "123456789";
+	char dest3[] = "";
+	printf("ft_memcpy: memory %p ", ft_memcpy(src3, &src3[3], 6));//dest 123456789 src 456789
+	printf("-> src string: %s \n", src3);
+
+
+	char src4[] = "123456789";
+	char dest4[] = "";
+	printf("ft_memmove: %p ", ft_memmove(src4, &src4[3], 6));//dest 123456789 src 456789 
+	printf("-> src string: %s\n", src4);
+/*
+/*
 	char s1[] = "adcd";
 	char s2[] = "abcd";
 	printf("ft_memcmp: %d\n", ft_memcmp(s1, s2, 3));
@@ -116,7 +134,7 @@ int main()
 	malitoa = ft_itoa(intitoa);
 	printf("ft_itoa: %s\n", maltrim);
 	free(malitoa);
-*/	
+	
 	char	strsplit[] = "agora vai dar certo";
 	char	c = ' ';
 	char	**ret;
@@ -132,7 +150,8 @@ int main()
 	printf("%s\n", ret[3]);
 	printf("%c\n", ret[3][5]);
 
-	printf("%c\n\n", ret);
+	printf("%p\n\n", ret[4]);
+
 	printf("%p\n", &ret[0]);
 	printf("%p\n", &ret[1]);
 	printf("%p\n", &ret[2]);
@@ -142,8 +161,15 @@ int main()
 	printf("%p\n", &ret[1][0]);
 	printf("%p\n", &ret[2][0]);
 	printf("%p\n", &ret[3][0]);
-	free(ret);
+
+    free(ret);
 
 
+	char	s_mapi[] = "abcd";
+	char	*ret;
+
+	ret = ft_strmapi(s_mapi, mapi_ft);
+	printf("%s", ret);
+*/
 	return(0);
 }

@@ -23,4 +23,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	ft_memcpy(d, s, n);
 	return (dest);
 }
-

@@ -26,11 +26,22 @@ char	**ft_split(char const *s, char c)
 			while (s[len_ptr] != c)
 				len_ptr++;
 			tab[i] = ft_substr(s, 0, len_ptr);
+			if (!tab[i])
+			{
+				while (i >= 0)
+				{
+					free(tab[i]);
+					tab[i] = NULL;
+					i--;
+				}
+				free(tab);
+				tab = NULL;
+			}
 			s = s + len_ptr;
 			i++;
 		}
 	}
-	tab[(sizeof(char *) * (nb_ptr)) + 1] = '\0';
+	tab[i] = 0;
 	return (tab);
 }
 
@@ -54,3 +65,5 @@ size_t	ft_ptr_count(char const *s, char c)
 	}
 	return (nb);
 }
+
+

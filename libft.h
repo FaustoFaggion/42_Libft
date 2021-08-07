@@ -2,7 +2,9 @@
 
 # define LIBFT_H
 #include <stdlib.h>
-#include <limits.h> // header of function calloc to call the function INT_MAX.
+// header of function calloc to call the function INT_MAX.
+#include <limits.h> 
+#include <unistd.h>
 
 /**
  * @brief convert string to integer. The string should contain numbers.
@@ -147,6 +149,38 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 
 /**
+ * @brief 	Outputs the character ’c’ to the given file descriptor.
+ * @param 1 The character to output.
+ * @param 2	The file descriptor on which to write.
+ * @return  None
+**/
+void	ft_putchar_fd(char c, int fd);
+
+/**
+ * @brief 	Outputs the string ’s’ to the given file descriptor, followed by a new line.
+ * @param 1 The string to output.
+ * @param 2	The file descriptor on which to write.
+ * @return  None
+**/
+void	ft_putendl_fd(char *s, int fd);
+
+/**
+ * @brief 	Outputs the integer ’n’ to the given file descriptor.
+ * @param 1 The integer to output.
+ * @param 2	The file descriptor on which to write.
+ * @return  None
+**/
+void	ft_putnbr_fd(int n, int fd);
+
+/**
+ * @brief 	Outputs the string ’s’ to the given file descriptor.
+ * @param 1 The string to output.
+ * @param 2	The file descriptor on which to write.
+ * @return  None
+**/
+void	ft_putstr_fd(char *s, int fd);
+
+/**
  * @brief 	Allocates (with malloc(3)) and returns an array of strings obtained by
  * 			splitting ’s’ using the character ’c’ as a delimiter. The array must be 
  * 			ended by a NULL pointer.
@@ -175,6 +209,16 @@ char	*ft_strchr(const char *s, int c);
  * @return  a pointer to the new string.
 **/
 char	*ft_strdup(const char *s);
+
+/**
+ * @brief	Applies the function f to each character of the string passed as argument,
+ * 			and passing its index as first argument. Each character is passed by 
+ * 			address to f to be modified if necessary. 	
+ * @param 1 The string on which to iterate.
+ * @param 2 The function to apply to each character.
+ * @return  None.
+**/
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 /**
  * @brief 	Allocates (with malloc(3)) and returns a new string, which is the result of the
@@ -216,6 +260,16 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
  * @return  the number of bytes in the string pointed to by s.
 **/
 size_t ft_strlen(const char *s);
+
+/**
+ * @brief	Applies the function ’f’ to each character of the string ’s’ to create a new string
+ * 			(with malloc(3)) resulting from successive applications of ’f’. 	
+ * @param 1 The string on which to iterate.
+ * @param 2 The function to apply to each character.
+ * @return  The string created from the successive applications of ’f’.
+ * 			Returns NULL if the allocation fails.
+**/
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**
  * @brief	compares the first at most n bytes from two strings s1 and s2.  The locale is 
