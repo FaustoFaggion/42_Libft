@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	}
 	return (0);
 }
-
+/*
 int main(void)
 {
 	char haystack[30] = "aaabcabcd";
@@ -38,3 +38,4 @@ int main(void)
 	printf("%s", ft_strnstr(haystack, "a", 1));
 	return(0);
 }
+*/
