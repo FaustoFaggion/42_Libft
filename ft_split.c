@@ -34,6 +34,7 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 
 	tab = mal_tab(s, c);
+	nb_ptr = ft_ptr_count(s, c);
 	i = 0;
 	while (i < nb_ptr)
 	{
