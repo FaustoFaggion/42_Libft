@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 static size_t	ft_ptr_count(char const *s, char c);
+static char		**free_tab(char **tab, int i);
 
 char	**ft_split(char const *s, char c)
 {
@@ -16,6 +17,36 @@ char	**ft_split(char const *s, char c)
 	tab = (char **)malloc(((sizeof(char *)) * (nb_ptr + 1)));
 	if (!tab)
 		return (NULL);
+	tab_sub(tab, s, nb_ptr);
+	return (tab);
+}
+
+static size_t	ft_ptr_count(char const *s, char c)
+{
+	size_t	i;
+	size_t	nb;
+
+	i = 0;
+	nb = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		if (s[i] != c && s[i] != '\0')
+		{	
+			nb++;
+			while (s[i] != c && s[i] != '\0')
+				i++;
+		}
+	}
+	return (nb);
+}
+
+static char	**mal_ptr(char **tab, char *s, size_t *nbr)
+{
+	size_t	i;
+	size_t	len_ptr;
+
 	i = 0;
 	while (i < nb_ptr)
 	{
@@ -28,17 +59,7 @@ char	**ft_split(char const *s, char c)
 				len_ptr++;
 			tab[i] = ft_substr(s, 0, len_ptr);
 			if (tab[i] == NULL)
-			{
-				while ((int)i >= 0)
-				{
-					free(tab[i]);
-					tab[i] = NULL;
-					i--;
-				}
-				free(tab);
-				tab = NULL;
-				return(tab);
-			}
+				free_tab(tab, i);
 			s = s + len_ptr;
 			i++;
 		}
@@ -47,23 +68,15 @@ char	**ft_split(char const *s, char c)
 	return (tab);
 }
 
-static size_t	ft_ptr_count(char const *s, char c) 
+static char	**free_tab(char **tab, int i)
 {
-	size_t	i;
-	size_t	nb;
-
-	i = 0;
-	nb = 0;
-	while (s[i] != '\0')
+	while ((int)i >= 0)
 	{
-		while (s[i] == c && s[i] != '\0')
-			i++;
-		if (s[i] != c  && s[i] != '\0')
-		{	
-			nb++;
-			while (s[i] != c && s[i] != '\0')
-				i++;
-		}
+		free(tab[i]);
+		tab[i] = NULL;
+		i--;
 	}
-	return (nb);
+	free(tab);
+	tab = NULL;
+	return (tab);
 }
