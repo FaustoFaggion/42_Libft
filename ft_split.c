@@ -67,12 +67,3 @@ size_t	ft_ptr_count(char const *s, char c)
 	}
 	return (nb);
 }
-
-int main(void)
-{
-
-	char * * tab = ft_split("  tripouille  42  ", ' ');
-
-	printf("%p", tab[2]);
-	return(0);
-}

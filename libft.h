@@ -3,7 +3,8 @@
 # define LIBFT_H
 #include <stdlib.h>
 // header of function calloc to call the function INT_MAX.
-#include <limits.h> 
+#define INT_MIN -2147483648 
+#define INT_MAX 2147483647
 #include <unistd.h>
 
 /**
@@ -204,7 +205,7 @@ char	*ft_strchr(const char *s, int c);
 
 /**
  * @brief 	duplicates the string s. Memory for the new string is obteined with malloc, and can 
-			be freed with free.
+			be freed with free. the NUll character is added to the end.
  * @param 1 string s
  * @return  a pointer to the new string.
 **/
@@ -213,7 +214,7 @@ char	*ft_strdup(const char *s);
 /**
  * @brief	Applies the function f to each character of the string passed as argument,
  * 			and passing its index as first argument. Each character is passed by 
- * 			address to f to be modified if necessary. 	
+ * 			address to f to be modified if necessary.
  * @param 1 The string on which to iterate.
  * @param 2 The function to apply to each character.
  * @return  None.
