@@ -58,7 +58,7 @@ size_t	ft_ptr_count(char const *s, char c)
 	{
 		while (s[i] == c && s[i] != '\0')
 			i++;
-		if (s[i] != c)
+		if (s[i] != c  && s[i] != '\0')
 		{	
 			nb++;
 			while (s[i] != c && s[i] != '\0')
@@ -73,6 +73,6 @@ int main(void)
 
 	char * * tab = ft_split("  tripouille  42  ", ' ');
 
-	printf("%s", tab[2]);
+	printf("%p", tab[2]);
 	return(0);
 }
