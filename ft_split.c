@@ -9,8 +9,6 @@ char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	size_t	nb_ptr;
-	size_t	len_ptr;
-	size_t	i;
 
 	if (!s)
 		return (NULL);
