@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;
-	
+
 	if (!s)
 		return (NULL);
 	if (c == 0)
@@ -30,5 +30,4 @@ char	*ft_strrchr(const char *s, int c)
 	if (*((char *)s + len) != (char)c)
 		return (NULL);
 	return ((char *)s + len);
-	
 }

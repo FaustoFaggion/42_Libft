@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/09 19:48:12 by fagiusep          #+#    #+#             */
+/*   Updated: 2021/08/09 19:48:12 by fagiusep         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 
@@ -8,9 +20,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s == NULL)
 		return (NULL);
-	if(start > ft_strlen(s))
+	if (start > ft_strlen(s))
 		return (ft_strdup(""));
-	if((ft_strlen(s) - start) < len)
+	if ((ft_strlen(s) - start) < len)
 		size = (ft_strlen(s) - start) + 1;
 	else
 		size = len + 1;
@@ -19,18 +31,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		return (NULL);
 	}
-
 	ft_strlcpy(substr, &s[start], size);
 	return (substr);
 }
-/*
-int main(void)
-{
-	char * str = ft_strdup("1");
-	char *s = ft_substr(str, 42, 42000000);
-
-	printf("%s", s);
-	free(s);
-	return(0);
-}
-*/

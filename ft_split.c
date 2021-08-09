@@ -1,8 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/09 19:46:57 by fagiusep          #+#    #+#             */
+/*   Updated: 2021/08/09 19:46:57 by fagiusep         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 
 static size_t	ft_ptr_count(char const *s, char c);
 
+static size_t	ft_ptr_count(char const *s, char c)
+{
+	if (!s)
+		return (NULL);
+	nb_ptr = ft_ptr_count(s, c);
+	tab = (char **)malloc(((sizeof(char *)) * (nb_ptr + 1)));
+	if (!tab)
+		return (NULL);
+}
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
@@ -10,6 +31,7 @@ char	**ft_split(char const *s, char c)
 	size_t	len_ptr;
 	size_t	i;
 
+	tab = mal_tab(s, c);
 	if (!s)
 		return (NULL);
 	nb_ptr = ft_ptr_count(s, c);
