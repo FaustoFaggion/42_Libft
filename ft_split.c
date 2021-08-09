@@ -24,7 +24,7 @@ char	**ft_split(char const *s, char c)
 		else if (*s != c)
 		{
 			len_ptr = 0;
-			while (s[len_ptr] != c)
+			while (s[len_ptr] != c && s[len_ptr] != 0)
 				len_ptr++;
 			tab[i] = ft_substr(s, 0, len_ptr);
 			if (tab[i] == NULL)
@@ -47,7 +47,7 @@ char	**ft_split(char const *s, char c)
 	return (tab);
 }
 
-size_t	ft_ptr_count(char const *s, char c)
+static size_t	ft_ptr_count(char const *s, char c) 
 {
 	size_t	i;
 	size_t	nb;
