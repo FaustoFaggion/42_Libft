@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static size_t	ft_numlen(int num)
 {
@@ -53,4 +54,13 @@ char	*ft_itoa(int n)
 		n_digits--;
 	}
 	return (str);
+}
+
+int main(void)
+{
+	char	*s;
+
+	s = ft_itoa(INT_MIN);
+	printf("%s", s);
+	return(0);
 }
