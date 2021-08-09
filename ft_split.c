@@ -42,11 +42,11 @@ char	**ft_split(char const *s, char c)
 	return (tab);
 }
 
-static char	**make_tab(char *s, char *c)
+static char	**make_tab(char s, char c)
 {
 	size_t	nb_ptr;
 	char	**tab;
-	
+
 	if (!s)
 		return (NULL);
 	nb_ptr = ft_ptr_count(s, c);
