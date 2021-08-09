@@ -17,6 +17,9 @@ static size_t	ft_ptr_count(char const *s, char c);
 
 static size_t	ft_ptr_count(char const *s, char c)
 {
+	char	**tab;
+	size_t	nb_ptr;
+
 	if (!s)
 		return (NULL);
 	nb_ptr = ft_ptr_count(s, c);
@@ -27,17 +30,10 @@ static size_t	ft_ptr_count(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
-	size_t	nb_ptr;
 	size_t	len_ptr;
 	size_t	i;
 
 	tab = mal_tab(s, c);
-	if (!s)
-		return (NULL);
-	nb_ptr = ft_ptr_count(s, c);
-	tab = (char **)malloc(((sizeof(char *)) * (nb_ptr + 1)));
-	if (!tab)
-		return (NULL);
 	i = 0;
 	while (i < nb_ptr)
 	{
