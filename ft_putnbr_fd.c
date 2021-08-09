@@ -6,7 +6,7 @@ void	ft_putnbr_fd(int n, int fd)
 	int		len;
 
 	if(n == INT_MIN)
-		return(ft_putstr("-2147483648"));
+		ft_putstr_fd("-2147483648", fd);
 	if(n > INT_MIN && n <= INT_MAX)
 		nb = ft_itoa(n);
 	len = ft_strlen(nb);
