@@ -6,8 +6,6 @@ static char	**make_tab(char *s, char *c);
 
 char	**ft_split(char const *s, char c)
 {
-	char	**tab;
-	size_t	nb_ptr;
 	size_t	len_ptr;
 	size_t	i;
 
@@ -45,6 +43,8 @@ char	**ft_split(char const *s, char c)
 
 static char	**make_tab(char *s, char *c)
 {
+	size_t	nb_ptr;
+	char	**tab;
 	if (!s)
 		return (NULL);
 	nb_ptr = ft_ptr_count(s, c);
