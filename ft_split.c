@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 static size_t	ft_ptr_count(char const *s, char c);
-static char		**free_tab(char **tab, int i);
-static char	**mal_ptr(char **tab, char *s, size_t *nbr);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	size_t	nb_ptr;
+	size_t	len_ptr;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
@@ -16,7 +16,34 @@ char	**ft_split(char const *s, char c)
 	tab = (char **)malloc(((sizeof(char *)) * (nb_ptr + 1)));
 	if (!tab)
 		return (NULL);
-	tab_sub(tab, s, nb_ptr);
+	i = 0;
+	while (i < nb_ptr)
+	{
+		if (*s == c)
+			s++;
+		else if (*s != c)
+		{
+			len_ptr = 0;
+			while (s[len_ptr] != c && s[len_ptr] != 0)
+				len_ptr++;
+			tab[i] = ft_substr(s, 0, len_ptr);
+			if (tab[i] == NULL)
+			{
+				while ((int)i >= 0)
+				{
+					free(tab[i]);
+					tab[i] = NULL;
+					i--;
+				}
+				free(tab);
+				tab = NULL;
+				return (tab);
+			}
+			s = s + len_ptr;
+			i++;
+		}
+	}
+	tab[i] = NULL;
 	return (tab);
 }
 
@@ -39,43 +66,4 @@ static size_t	ft_ptr_count(char const *s, char c)
 		}
 	}
 	return (nb);
-}
-
-static char	**mal_ptr(char **tab, char *s, size_t *nbr)
-{
-	size_t	i;
-	size_t	len_ptr;
-
-	i = 0;
-	while (i < nb_ptr)
-	{
-		if (*s == c)
-			s++;
-		else if (*s != c)
-		{
-			len_ptr = 0;
-			while (s[len_ptr] != c && s[len_ptr] != 0)
-				len_ptr++;
-			tab[i] = ft_substr(s, 0, len_ptr);
-			if (tab[i] == NULL)
-				free_tab(tab, i);
-			s = s + len_ptr;
-			i++;
-		}
-	}
-	tab[i] = NULL;
-	return (tab);
-}
-
-static char	**free_tab(char **tab, int i)
-{
-	while ((int)i >= 0)
-	{
-		free(tab[i]);
-		tab[i] = NULL;
-		i--;
-	}
-	free(tab);
-	tab = NULL;
-	return (tab);
 }
