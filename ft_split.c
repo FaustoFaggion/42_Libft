@@ -1,7 +1,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-size_t	ft_ptr_count(char const *s, char c);
+static size_t	ft_ptr_count(char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
