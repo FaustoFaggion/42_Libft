@@ -55,7 +55,7 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
+/*
 int main(void)
 {
 	char	*s;
@@ -64,3 +64,4 @@ int main(void)
 	printf("%s", s);
 	return(0);
 }
+*/
