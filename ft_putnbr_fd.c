@@ -13,5 +13,5 @@ void	ft_putnbr_fd(int n, int fd)101 10 1
 		break;
 	if(n >= 10 && n <= INT_MAX)
 		ft_putnbr_fd(n / 10, fd);
-	ft_putnbr_fd(n % 10, fd)
+	ft_putnbr_fd(n % 10, fd);
 }
