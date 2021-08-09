@@ -1,4 +1,5 @@
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_ptr_count(char const *s, char c);
 
@@ -42,7 +43,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		}
 	}
-	tab[i] = 0;
+	tab[i] = NULL;
 	return (tab);
 }
 
@@ -67,4 +68,11 @@ size_t	ft_ptr_count(char const *s, char c)
 	return (nb);
 }
 
+int main(void)
+{
 
+	char * * tab = ft_split("  tripouille  42  ", ' ');
+
+	printf("%s", tab[2]);
+	return(0);
+}
