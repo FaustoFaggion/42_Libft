@@ -3,6 +3,7 @@
 
 static size_t	ft_ptr_count(char const *s, char c);
 static char		**free_tab(char **tab, int i);
+static char	**mal_ptr(char **tab, char *s, size_t *nbr);
 
 char	**ft_split(char const *s, char c)
 {
