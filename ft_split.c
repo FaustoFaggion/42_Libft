@@ -12,7 +12,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	nb_ptr = ft_ptr_count(s, c);
-	tab = (char **)malloc(((sizeof(char *)) * (nb_ptr)) + 1);
+	tab = (char **)malloc(((sizeof(char *)) * (nb_ptr + 1)));
 	if (!tab)
 		return (NULL);
 	i = 0;
@@ -28,7 +28,7 @@ char	**ft_split(char const *s, char c)
 			tab[i] = ft_substr(s, 0, len_ptr);
 			if (tab[i] == NULL)
 			{
-				while (i >= 0)
+				while ((int)i >= 0)
 				{
 					free(tab[i]);
 					tab[i] = NULL;
