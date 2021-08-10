@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//verificar video
+#include <stdio.h>
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*str1;
@@ -25,9 +26,21 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return ((int)n);
 	while (i < n)
 	{
+		if (str1[i] == '\0' && str2[i] == '\0')
+			return (0);
 		if ((str1[i] != str2[i]))
 			return ((int)(str1[i] - str2[i]));
 		i++;
 	}
 	return (0);
+}
+
+int main(void)
+{
+	char	s1[] = "1234";
+	char	s2[] = "1234";
+	size_t	n = 9;
+
+	printf("%d\n", ft_strncmp(s1, s2, n));
+	return (0);	
 }
