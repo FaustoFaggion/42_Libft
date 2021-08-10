@@ -1,40 +1,26 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/09 19:46:57 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/09 19:46:57 by fagiusep         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 #include <stdio.h>
 
 static size_t	ft_ptr_count(char const *s, char c);
 
-static size_t	ft_ptr_count(char const *s, char c)
+static char	**free_tab(char **tab, size_t i)
 {
-	char	**tab;
-	size_t	nb_ptr;
-
-	if (!s)
-		return (NULL);
-	nb_ptr = ft_ptr_count(s, c);
-	tab = (char **)malloc(((sizeof(char *)) * (nb_ptr + 1)));
-	if (!tab)
-		return (NULL);
+	while ((int)i >= 0)
+	{
+		free(tab[i]);
+		tab[i] = NULL;
+		i--;
+	}
+	free(tab);
+	tab = NULL;
+	return (tab);
 }
-char	**ft_split(char const *s, char c)
+
+static void	mal_sub(char **tab, char const *s, char c, size_t nb_ptr)
 {
-	char	**tab;
 	size_t	len_ptr;
 	size_t	i;
 
-	tab = mal_tab(s, c);
-	nb_ptr = ft_ptr_count(s, c);
 	i = 0;
 	while (i < nb_ptr)
 	{
@@ -47,22 +33,26 @@ char	**ft_split(char const *s, char c)
 				len_ptr++;
 			tab[i] = ft_substr(s, 0, len_ptr);
 			if (tab[i] == NULL)
-			{
-				while ((int)i >= 0)
-				{
-					free(tab[i]);
-					tab[i] = NULL;
-					i--;
-				}
-				free(tab);
-				tab = NULL;
-				return (tab);
-			}
+				free_tab(tab, i);
 			s = s + len_ptr;
 			i++;
 		}
 	}
 	tab[i] = NULL;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**tab;
+	size_t	nb_ptr;
+
+	if (!s)
+		return (NULL);
+	nb_ptr = ft_ptr_count(s, c);
+	tab = (char **)malloc(((sizeof(char *)) * (nb_ptr + 1)));
+	if (!tab)
+		return (NULL);
+	mal_sub(tab, s, c, nb_ptr);
 	return (tab);
 }
 
@@ -86,3 +76,15 @@ static size_t	ft_ptr_count(char const *s, char c)
 	}
 	return (nb);
 }
+
+/*
+int	main(void)
+{
+	char	str[] = "Fausto Faggion";
+	char	**ret;
+
+	ret = ft_split(str, ' ');
+	printf("%s", ret[2]);
+	return (0);
+}
+*/
