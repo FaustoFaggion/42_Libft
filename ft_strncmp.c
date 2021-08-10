@@ -34,13 +34,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-int main(void)
-{
-	char	s1[] = "1234";
-	char	s2[] = "1234";
-	size_t	n = 9;
-
-	printf("%d\n", ft_strncmp(s1, s2, n));
-	return (0);	
-}
