@@ -13,7 +13,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 static size_t	ft_numlen(int num)
 {
@@ -47,11 +47,15 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	if (n < 0)
+	{
 		str[0] = '-';
+		n *= -1;
+	}
 	str[n_digits] = '\0';
+	n_digits -= 1;
 	while (n_digits)
 	{
-		str[n_digits - 1] = (n % 10) + '0';
+		str[n_digits] = (n % 10) + '0';
 		n = n / 10;
 		n_digits--;
 	}
@@ -60,10 +64,9 @@ char	*ft_itoa(int n)
 /*
 int main(void)
 {
-	char	*s;
-
-	s = ft_itoa(INT_MIN);
-	printf("%s", s);
+	char *res = ft_itoa(-9);
+		
+	printf("%s\n",res);
 	return(0);
 }
 */
