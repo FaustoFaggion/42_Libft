@@ -14,5 +14,16 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	return (!ft_isalpha(c) && !ft_isdigit(c));
 }
+/*
+0	0	0
+0	1	1
+1	0	1
+1	1 	1
+
+0	0	0
+0	1	0
+1	0	0
+1	1	1
+*/
