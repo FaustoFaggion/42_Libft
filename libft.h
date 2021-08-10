@@ -136,7 +136,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
  * @param 1 *dest	- destiny memory area. 
  * @param 2 *src	- source memory area.
  * @param 4 size_t n- number of bytes to be copied.
- * @return  Returns a pointer to dest
+ * @return  Returns a pointer to dest.  If parameters are NUll segmentfault returns.
 **/
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
@@ -147,7 +147,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 			from the temporary array to dest.
  * @param 1 *dest	-memory area where is going to be copied to.
  * @param 2 *src	-memory area where is going to be copied by.
- * @return  A pointer to dest.
+ * @return  A pointer to dest. If parameters are NUll segmentfault returns.		 
 **/
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
@@ -270,7 +270,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
  * @brief	calculates the length of the string pointed to by s, excluding the terminating null 
  * 			byte ('\0').	
  * @param 1 
- * @return  the number of bytes in the string pointed to by s.
+ * @return  the number of bytes in the string pointed to by s.  If parameters are NUll segmentfault returns.
 **/
 size_t ft_strlen(const char *s);
 
@@ -320,7 +320,7 @@ char	*ft_strrchr(const char *s, int c);
  * 			 in ’set’ removed from the beginning and the end of the string. 	
  * @param 1 The string to be trimmed.
  * @param 2 The reference set of characters to trim.
- * @return  The trimmed string. NULL if the allocation fails.
+ * @return  The trimmed string. NULL if the allocation fails.  If parameters are NUll segmentfault returns.
 **/
 char	*ft_strtrim(char const *s1, char const *set);
 
