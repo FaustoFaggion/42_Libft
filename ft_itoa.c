@@ -53,18 +53,20 @@ char	*ft_itoa(int n)
 	}
 	str[n_digits] = '\0';
 	n_digits -= 1;
-	while (n_digits)
+	while (n > 9)
 	{
 		str[n_digits] = (n % 10) + '0';
 		n = n / 10;
 		n_digits--;
 	}
+	if (n < 10)
+		str[n_digits] = n + '0';
 	return (str);
 }
 /*
 int main(void)
 {
-	char *res = ft_itoa(-9);
+	char *res = ft_itoa(9);
 		
 	printf("%s\n",res);
 	return(0);
