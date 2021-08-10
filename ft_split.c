@@ -80,7 +80,7 @@ static size_t	ft_ptr_count(char const *s, char c)
 /*
 int	main(void)
 {
-	char	str[] = "Fausto Faggion";
+	char	str[] = "Paz e Amor";
 	char	**ret;
 
 	ret = ft_split(str, ' ');
