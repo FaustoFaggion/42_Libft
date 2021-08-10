@@ -84,7 +84,7 @@ int	ft_isascii(int c);
  * @return  The  values returned are nonzero if the character c 
 			falls into the tested class, and zero if not.
 **/
-int ft_isdigit(char c);
+int ft_isdigit(int c);
 
 /**
  * @brief 	checks for any printable character including space.
