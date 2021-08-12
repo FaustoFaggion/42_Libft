@@ -1,45 +1,8 @@
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	ft_ptr_count(char const *s, char c);
-
-static char	**free_tab(char **tab, size_t i)
-{
-	while ((int)i >= 0)
-	{
-		free(tab[i]);
-		tab[i] = NULL;
-		i--;
-	}
-	free(tab);
-	tab = NULL;
-	return (tab);
-}
-
-static void	mal_sub(char **tab, char const *s, char c, size_t nb_ptr)
-{
-	size_t	len_ptr;
-	size_t	i;
-
-	i = 0;
-	while (i < nb_ptr)
-	{
-		if (*s == c)
-			s++;
-		else if (*s != c)
-		{
-			len_ptr = 0;
-			while (s[len_ptr] != c && s[len_ptr] != 0)
-				len_ptr++;
-			tab[i] = ft_substr(s, 0, len_ptr);
-			if (tab[i] == NULL)
-				free_tab(tab, i);
-			s = s + len_ptr;
-			i++;
-		}
-	}
-	tab[i] = NULL;
-}
+static void		mal_sub(char **tab, char const *s, char c, size_t nb_ptr);
+static char		**free_tab(char **tab, size_t i);
 
 char	**ft_split(char const *s, char c)
 {
@@ -75,6 +38,44 @@ static size_t	ft_ptr_count(char const *s, char c)
 		}
 	}
 	return (nb);
+}
+
+static void	mal_sub(char **tab, char const *s, char c, size_t nb_ptr)
+{
+	size_t	len_ptr;
+	size_t	i;
+
+	i = 0;
+	while (i < nb_ptr)
+	{
+		if (*s == c)
+			s++;
+		else if (*s != c)
+		{
+			len_ptr = 0;
+			while (s[len_ptr] != c && s[len_ptr] != 0)
+				len_ptr++;
+			tab[i] = ft_substr(s, 0, len_ptr);
+			if (tab[i] == NULL)
+				free_tab(tab, i);
+			s = s + len_ptr;
+			i++;
+		}
+	}
+	tab[i] = NULL;
+}
+
+static char	**free_tab(char **tab, size_t i)
+{
+	while ((int)i >= 0)
+	{
+		free(tab[i]);
+		tab[i] = NULL;
+		i--;
+	}
+	free(tab);
+	tab = NULL;
+	return (tab);
 }
 
 /*

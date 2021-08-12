@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//verificar necessidade de +1. A substring já adiciona +1.
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	len;
