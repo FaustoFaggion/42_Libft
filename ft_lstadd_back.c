@@ -6,7 +6,7 @@
 /*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 17:33:10 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/12 17:33:10 by fagiusep         ###   ########.fr       */
+/*   Updated: 2021/08/13 12:58:58 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	if (!lst)
+	if (!lst || !new)
 		return ;
 	if (!*lst)
 	{
@@ -24,7 +24,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	}
 	last = ft_lstlast(*lst);
-	if (last)
-		last->next = new;
-}
-					
+	last->next = new;
+}		
