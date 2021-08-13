@@ -6,7 +6,7 @@
 /*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 19:47:57 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/13 13:09:04 by fagiusep         ###   ########.fr       */
+/*   Updated: 2021/08/13 13:15:03 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	{
 		return ((char *)&haystack[0]);
 	}
+	if(n == 0)
+		return (NULL);
 	i = 0;
 	while (haystack[i] != '\0' && i <= (n - ft_strlen(needle)))
 	{
