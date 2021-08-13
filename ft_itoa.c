@@ -22,7 +22,7 @@ char	*ft_itoa(int n)
 	size_t	n_digits;
 	char	*str;
 
-	if (n == INT_MIN)
+	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (n == 0)
 		return (ft_strdup("0"));

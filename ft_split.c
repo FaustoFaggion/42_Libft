@@ -89,15 +89,3 @@ static char	**free_tab(char **tab, size_t i)
 	tab = NULL;
 	return (tab);
 }
-
-/*
-int	main(void)
-{
-	char	str[] = "Paz e Amor";
-	char	**ret;
-
-	ret = ft_split(str, ' ');
-	printf("%s", ret[2]);
-	return (0);
-}
-*/

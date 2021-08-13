@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 //verificar necessidade de +1. A substring já adiciona +1.
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -25,3 +26,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		len--;
 	return (ft_substr(s1, 0, len + 1));
 }
+/*
+int main(void)
+{
+	char	s[] = "/*12345/*";
+
+	printf("%s", ft_strtrim(s, "/*"));
+	return (0);
+}
+*/
