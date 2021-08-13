@@ -54,8 +54,6 @@ OBJ			:= $(SRC:.c=.o)
 
 OBJ_BONUS	:= $(SRC_BONUS:.c=.o)
 
-#.DEFAULT_GO := all
-
 all:	$(NAME)
 
 $(NAME):	$(OBJ) 
