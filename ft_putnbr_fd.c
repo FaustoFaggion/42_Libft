@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
+/*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/09 19:46:44 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/09 19:46:44 by fagiusep         ###   ########.fr       */
+/*   Created: 2021/08/13 15:16:54 by fagiusep          #+#    #+#             */
+/*   Updated: 2021/08/13 15:16:54 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

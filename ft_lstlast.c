@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
+/*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/12 17:33:38 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/12 17:33:38 by fagiusep         ###   ########.fr       */
+/*   Created: 2021/08/13 15:14:33 by fagiusep          #+#    #+#             */
+/*   Updated: 2021/08/13 15:14:33 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

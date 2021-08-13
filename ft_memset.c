@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
+/*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/09 19:46:27 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/09 19:46:27 by fagiusep         ###   ########.fr       */
+/*   Created: 2021/08/13 15:16:17 by fagiusep          #+#    #+#             */
+/*   Updated: 2021/08/13 15:16:17 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

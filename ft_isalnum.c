@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
+/*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/09 19:44:52 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/09 19:44:52 by fagiusep         ###   ########.fr       */
+/*   Created: 2021/08/13 15:10:26 by fagiusep          #+#    #+#             */
+/*   Updated: 2021/08/13 15:10:26 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

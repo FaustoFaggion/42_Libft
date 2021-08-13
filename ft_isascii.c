@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
+/*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/09 19:45:05 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/09 19:45:05 by fagiusep         ###   ########.fr       */
+/*   Created: 2021/08/13 15:11:57 by fagiusep          #+#    #+#             */
+/*   Updated: 2021/08/13 15:11:57 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

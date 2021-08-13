@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
+/*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/12 17:33:10 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/13 12:58:58 by fagiusep         ###   ########.fr       */
+/*   Created: 2021/08/13 15:13:36 by fagiusep          #+#    #+#             */
+/*   Updated: 2021/08/13 15:13:41 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

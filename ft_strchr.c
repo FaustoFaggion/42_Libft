@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
+/*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/09 19:47:02 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/09 19:47:02 by fagiusep         ###   ########.fr       */
+/*   Created: 2021/08/13 15:17:18 by fagiusep          #+#    #+#             */
+/*   Updated: 2021/08/13 15:17:18 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

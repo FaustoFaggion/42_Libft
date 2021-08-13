@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fagiusep <faustofaggion@hotmail.com>       +#+  +:+       +#+        */
+/*   By: fagiusep <fagiusep@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/09 19:44:41 by fagiusep          #+#    #+#             */
-/*   Updated: 2021/08/09 19:44:41 by fagiusep         ###   ########.fr       */
+/*   Created: 2021/08/13 15:10:14 by fagiusep          #+#    #+#             */
+/*   Updated: 2021/08/13 15:10:14 by fagiusep         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
