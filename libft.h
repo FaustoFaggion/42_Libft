@@ -23,8 +23,9 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
-# define INT_MIN -2147483648
-# define INT_MAX 2147483647
+# define INT_MIN 		-2147483648
+# define INT_MAX 		2147483647
+# define BUFFER_SIZE	100
 
 /**
  * @brief convert string to integer. The string should contain numbers.
@@ -472,5 +473,9 @@ int		ft_tolower(int c);
  * @return  a alpha uppercase character.
 **/
 int		ft_toupper(int c);
+
+char	*ft_get_next_line(int fd);
+
+void	ft_split_free(char **ptr);
 
 #endif

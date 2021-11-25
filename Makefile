@@ -38,6 +38,18 @@ SRC			:= 	ft_atoi.c \
 				ft_substr.c \
 				ft_tolower.c \
 				ft_toupper.c \
+				ft_get_next_line.c \
+				ft_split_free.c \
+				ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+              	ft_lstlast.c \
+			  	ft_lstlast.c \
+			  	ft_lstadd_back.c \
+              	ft_lstdelone.c \
+			  	ft_lstclear.c \
+			  	ft_lstiter.c \
+              	ft_lstmap.c \
 
 SRC_BONUS	:=	ft_lstnew.c \
 				ft_lstadd_front.c \
